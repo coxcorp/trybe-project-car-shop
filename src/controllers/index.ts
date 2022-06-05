@@ -41,6 +41,11 @@ abstract class Controller<T> {
     req: Request<{ id: string }>,
     res: Response<T | null>
   ): Promise<Response<T | null> | void>;
+
+  abstract delete( 
+    req: Request<{ id: string }>,
+    res: Response<T | null>
+  ): Promise<Response<T | null> | void>;
 }
 
 export default Controller;
