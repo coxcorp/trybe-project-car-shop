@@ -6,6 +6,6 @@ const CarSchema = VehicleSchema.extend({
   seatsQty: z.number().min(2),
 });
 
-export type Car = z.infer<typeof CarSchema>;
+type Car = z.infer<typeof CarSchema>;
 
-export { CarSchema };
+export { Car, CarSchema };
