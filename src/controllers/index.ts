@@ -36,6 +36,11 @@ abstract class Controller<T> {
     req: RequestWithBody<{ id: string }>,
     res: Response<T> | ResponseError,
   ): Promise<typeof res>;
+
+  abstract update( 
+    req: Request<{ id: string }>,
+    res: Response<T | null>
+  ): Promise<Response<T | null> | void>;
 }
 
 export default Controller;
